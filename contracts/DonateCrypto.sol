@@ -10,3 +10,4 @@ struct Campaign{
    uint256 balance;
    bool active;
 }
+//start

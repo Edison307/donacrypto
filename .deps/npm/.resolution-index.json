@@ -1,0 +1,10 @@
+{
+  "contracts/DonateCrypto.sol": {
+    "__sources__": {
+      "contracts/DonateCrypto.sol": {
+        "content": "// SPDX-License-Identifier: MIT \r\npragma solidity ^0.8.17; \r\n\r\nstruct Campaign{\r\n   address author;\r\n   string title;\r\n   string description;\r\n   string videoUrl;\r\n   string imageUrl;\r\n   uint256 balance;\r\n   bool active;\r\n}\r\n//start",
+        "file": "contracts/DonateCrypto.sol"
+      }
+    }
+  }
+}
