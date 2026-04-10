@@ -10,4 +10,23 @@ struct Campaign{
    uint256 balance;
    bool active;
 }
-//start
+
+contract DonateCrypto{
+uint256 public fee =100; //wei
+uint nextid = 0;
+mapping(uint256 => campaign)public 
+
+function addCampaign(string calldata title, string calldata description, string calldata videoUrl, string calldata imageUrl) public{
+  Campaign memory newCampaign;
+  newCampaign.title = title;
+  newCampaign.description = description;
+  newCampaign.videoUrl = videoUrl;
+  newCampaign.imageUrl = imageUrl;
+  newCampaign.active = true;
+  newCampaign.author = msg.sender;
+ 
+nextid ++;   
+campaigns[nextid] = newCampaign;
+
+}
+}

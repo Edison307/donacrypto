@@ -2,7 +2,7 @@
   "contracts/DonateCrypto.sol": {
     "__sources__": {
       "contracts/DonateCrypto.sol": {
-        "content": "// SPDX-License-Identifier: MIT \r\npragma solidity ^0.8.17; \r\n\r\nstruct Campaign{\r\n   address author;\r\n   string title;\r\n   string description;\r\n   string videoUrl;\r\n   string imageUrl;\r\n   uint256 balance;\r\n   bool active;\r\n}\r\n//start",
+        "content": "// SPDX-License-Identifier: MIT \r\npragma solidity ^0.8.17; \r\n\r\nstruct Campaign{\r\n   address author;\r\n   string title;\r\n   string description;\r\n   string videoUrl;\r\n   string imageUrl;\r\n   uint256 balance;\r\n   bool active;\r\n}\r\n\r\ncontract DonateCrypto{\r\nuint256 public fee =100; //wei\r\nuint nextid = 0;\r\nmapping(uint256 => campaign)public \r\n\r\nfunction addCampaign(string calldata title, string calldata description, string calldata videoUrl, string calldata imageUrl) public{\r\n  Campaign memory newCampaign;\r\n  newCampaign.title = title;\r\n  newCampaign.description = description;\r\n  newCampaign.videoUrl = videoUrl;\r\n  newCampaign.imageUrl = imageUrl;\r\n  newCampaign.active = true;\r\n  newCampaign.author = msg.sender;\r\n \r\nnextid ++;   \r\ncampaigns[nextid] = newCampaign;\r\n\r\n}\r\n}",
         "file": "contracts/DonateCrypto.sol"
       }
     }
